@@ -8,7 +8,7 @@ const TodoEdit = ({ todo, index, todos, updateTodo, setOpenEdit, setOpenMenu }) 
   const handleUpdateTitle = (data, e) => {
     // send title's todo
     const bodyData = { title: data.title }
-    fetch('http://localhost:3001/todos/' + todo.id, {
+    fetch('https://my-json-server.typicode.com/sarinyaw/my-todo/todos/' + todo.id, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
