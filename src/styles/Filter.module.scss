@@ -32,4 +32,7 @@
     list-style: none;
     cursor: pointer;
   }
+  .active {
+    @extend .text-filterMenu-active
+  }
 }

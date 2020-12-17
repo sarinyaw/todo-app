@@ -8,8 +8,14 @@
   &:hover {
     color: $font-filter-menu-hover;
     background-color: $bg-filter-menu-hover;
-    transition: all .25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
+}
+
+.text-filterMenu-active {
+  color: $font-filter-menu-hover;
+  background-color: $bg-filter-menu-hover;
+  transition: all 0.25s ease-in-out;
 }
 
 // SET BG
