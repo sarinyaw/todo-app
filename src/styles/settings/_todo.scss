@@ -1,6 +1,6 @@
 // SET TEXT
 .text-task {
-  @include text($font-task-title, "Roboto", 24px);
+  @include text($font-task-title, "Roboto", 24px, 700);
 }
 .text-todo-done {
   @include text($font-todo-done, "Roboto", 16px, 400, left);
