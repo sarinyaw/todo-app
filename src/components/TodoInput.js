@@ -34,7 +34,7 @@ const TodoInput = ({ context }) => {
   }
   return (
     <form className={styles.inputTodo} onSubmit={handleSubmit(handleAddTodo)}>
-      <label for="title"></label>
+      <label htmlFor="title"></label>
       <input className={styles.newTodo} id="title" type="text" name="title" placeholder="Add your todo..." ref={register({ required: true })} />
     </form>
   )

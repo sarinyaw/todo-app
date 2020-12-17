@@ -31,7 +31,7 @@ const TodoEdit = ({ todo, index, todos, updateTodo, setOpenEdit, setOpenMenu }) 
   }
   return (
     <form id={`edit-form-${index}`} value={todo.id} className={styles.inputTodo} onSubmit={handleSubmit(handleUpdateTitle)}>
-      <label for="title"></label>
+      <label htmlFor="title"></label>
       <input id="title" type="text" name="title" defaultValue={todo.title} placeholder="Edit todo list" ref={register({ required: true })} autoFocus />
       <input type="submit" className={styles.saveButton} value="Save" />
     </form>
