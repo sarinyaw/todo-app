@@ -1,0 +1,21 @@
+// SET TEXT
+.text-filterBar {
+  @include text($font-filter-menu, "Roboto", 14px);
+}
+
+.text-filterMenu {
+  @include text($font-filter-menu, "Roboto", 14px);
+  &:hover {
+    color: $font-filter-menu-hover;
+    background-color: $bg-filter-menu-hover;
+    transition: all .25s ease-in-out;
+  }
+}
+
+// SET BG
+.bg-filterBar {
+  background-color: $bg-filter-bar;
+}
+.bg-filterMenu {
+  background-color: $bg-filter-menu;
+}

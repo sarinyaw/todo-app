@@ -1,0 +1,15 @@
+@import "./main";
+@import "./settings/todo";
+@import "./components/input";
+@import "./components/button";
+
+.inputTodo {
+  @include flexbox; // from mixin in main
+  @extend .inputText; // from input component
+  width: 100%;
+  position: relative;
+}
+
+.saveButton {
+  @extend .btn-save; // from button component
+}

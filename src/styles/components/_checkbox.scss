@@ -1,0 +1,34 @@
+.checkbox-main {
+  .checkbox {
+    @include checkbox($bg-todo-checkbox);
+  }
+  .checked {
+    @include checked($bg-todo-checkbox, $font-todo-check);
+    animation: checkIn 0.25s ease-in-out;
+  }
+  .unchecked {
+    animation: checkOut 0.25s ease-in-out;
+  }
+}
+
+@keyframes checkIn {
+  0% {
+    background-color: transparent;
+    color: transparent;
+  }
+  100% {
+    background-color: $bg-todo-checkbox;
+    color: $font-todo-check;
+  }
+}
+
+@keyframes checkOut {
+  0% {
+    background-color: $bg-todo-checkbox;
+    color: $font-todo-check;
+  }
+  100% {
+    background-color: transparent;
+    color: transparent;
+  }
+}

@@ -1,0 +1,24 @@
+@import "./main";
+@import "./settings/todo";
+
+.container {
+  @extend .bg-container; // from bg setting
+  @include content(3rem 1.5rem, 3rem auto, 1rem); // from mixin in main
+  width: 80%;
+  max-width: 768px;
+  height: max-content;
+  * {
+    user-select: none;
+  }
+}
+.wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+
+.taskMenu {
+  @include flexbox; // from mixin in main
+  .title {
+    @extend .text-task; // from text setting
+  }
+}

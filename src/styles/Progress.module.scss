@@ -1,0 +1,33 @@
+@import "./main";
+@import "./settings/progress";
+
+.progress {
+  @extend .bg-progress-layout; // from bg setting
+  @include content(1.25rem, auto, 1rem); // from mixin in main
+  width: auto;
+  max-width: 600px;
+  margin-bottom: 2rem;
+  .title {
+    @extend .text-progress-title; // from text setting
+    font-weight: 500;
+    margin: 0;
+  }
+  p {
+    @extend .text-progress-completed; // from text setting
+    margin: 0;
+  }
+}
+.progressBar {
+  @extend .bar; // from bar setting
+  @extend .bg-progress-bar; // from bg setting
+  margin: 0.75rem 0;
+  position: relative;
+}
+.progressLine {
+  @extend .bar; // from bar setting
+  @extend .bg-progress-line; // from bg setting
+  position: absolute;
+  transition: all .25s;
+  animation: slideRight 1.5s ease-in-out;
+  transform-origin: 0% 100%;
+}

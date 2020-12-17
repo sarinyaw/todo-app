@@ -1,0 +1,64 @@
+@import "./main";
+@import "./settings/todo";
+@import "./components/checkbox";
+
+.todoList {
+  transform-origin: 100% 0%;
+}
+
+.todoBar {
+  @extend .bg-todo; // from setting
+  @include flexbox; // from mixin in main
+  @include content(0.75rem 1.5rem, auto, 2rem); // from mixin in main
+  animation: scaleRight 1s ease-in-out;
+  transform-origin: 0% 100%;
+  margin-top: 1rem;
+}
+
+.todo {
+  @include flexbox(false, left); // from mixin in main
+  @extend .checkbox-main; // from checkbox component
+  width: 100%;
+  max-width: 600px;
+  min-height: 31px;
+  cursor: pointer;
+  p {
+    width: 100%;
+  }
+  .undone {
+    @extend .text-todo-undone; // from text setting
+  }
+  .done {
+    @extend .text-todo-done; // from text setting
+    text-decoration: line-through;
+  }
+}
+
+.menuBar {
+  @include flexbox(column, center, center); // from mixin in main
+  position: relative;
+  cursor: pointer;
+  ion-icon {
+    @extend .text-todo-icon; // from text setting
+  }
+  .menu {
+    @extend .bg-todo; // from bg setting
+    @extend .menu-console; // from menu setting
+    width: 68px;
+    position: absolute;
+    right: -0.5rem;
+    top: 1rem;
+    z-index: 2;
+    transform-origin: 100% 0%;
+    animation: scaleDown .5s ease-in-out;
+    li {
+      list-style: none;
+    }
+    .editTodo {
+      @extend .text-todo-edit; // from text setting
+    }
+    .deleteTodo {
+      @extend .text-todo-delete; // from text setting
+    }
+  }
+}

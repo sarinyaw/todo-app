@@ -1,0 +1,41 @@
+// SET TEXT
+.text-task {
+  @include text($font-task-title, "Roboto", 24px);
+}
+.text-todo-done {
+  @include text($font-todo-done, "Roboto", 16px, 400, left);
+}
+.text-todo-undone {
+  @include text($font-todo-undone, "Roboto", 16px, 400, left);
+}
+.text-todo-check {
+  color: $font-todo-check;
+}
+.text-todo-edit {
+  @include text($font-todo-edit, "Roboto", 14px, 400, left, 1rem 0);
+}
+.text-todo-delete {
+  @include text($font-todo-delete, "Roboto", 14px, 400, left, 1rem 0);
+}
+.text-todo-icon {
+  @include text($font-todo-icon, "Roboto", 24px);
+}
+
+// SET MENU
+.menu-console {
+  @include content(0 1.5rem, 0.5rem 0, 0.5rem, false, $bg-shadow);
+}
+
+// SET BG
+.bg-checkbox {
+  @include content(0, 0, 0.5rem, 2px solid $bg-todo-checkbox);
+}
+.bg-check {
+  background-color: $bg-todo-checkbox;
+}
+.bg-container {
+  background-color: $bg-container;
+}
+.bg-todo {
+  background-color: $bg-todo-layout;
+}

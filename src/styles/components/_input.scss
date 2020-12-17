@@ -1,0 +1,9 @@
+.inputText {
+  input[type="text"] {
+    @include text($font-todo-input, "Roboto", 16px, 400, left, 0);
+    outline: none;
+    border: 0;
+    width: 100%;
+    min-height: 31px;
+  }
+}

@@ -1,0 +1,18 @@
+@import "./main";
+@import "./settings/todo";
+@import "./components/input";
+
+.inputTodo {
+  @include flexbox; // from mixin in main
+  @extend .inputText; // from input component
+  margin-top: 1rem;
+}
+
+.newTodo {
+  @extend .bg-todo; // from bg setting
+  @include content(0.75rem 1.5rem, 1rem auto, 2rem); // from mixin in main
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  animation: scaleFull 1s ease-in-out;
+}

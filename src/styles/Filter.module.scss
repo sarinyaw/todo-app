@@ -1,0 +1,35 @@
+@import "./main";
+@import "./settings/filter";
+
+.filter {
+  position: relative;
+}
+.filterBar {
+  @extend .bg-filterBar; // from bg setting
+  @include flexbox(); // from mixin in main
+  @include content(0.5rem, auto, .75rem); // from mixin in main
+  position: relative;
+  width: 100px;
+  min-height: 19px;
+  cursor: pointer;
+  span {
+    @extend .text-filterBar; // from text setting
+    display: flex;
+  }
+}
+.filterMenu {
+  @extend .bg-filterMenu; // from bg setting
+  @include content(0.5rem, auto, .75rem, false, $font-filter-menu-shadow); // from mixin in main
+  margin-top: .5rem;
+  position: absolute;
+  width: 100px;
+  z-index: 3;
+  transform-origin: 100% 0%;
+  animation: scaleDown .5s ease-in-out;
+  li {
+    @extend .text-filterMenu; // from text setting
+    @include content(.25rem .5rem, .25rem 0, 0.5rem); // from mixin in main
+    list-style: none;
+    cursor: pointer;
+  }
+}

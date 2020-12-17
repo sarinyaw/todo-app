@@ -1,0 +1,28 @@
+// SET TEXT
+.text-progress-title {
+  @include text($font-progress-title, "Roboto", 28px);
+}
+
+.text-progress-completed {
+  @include text($font-progress-completed, "Roboto", 16px);
+}
+
+// SET BG
+.bg-progress-layout {
+  background-color: $bg-progress-layout;
+}
+
+.bg-progress-bar {
+  background-color: $bg-progress-bar;
+}
+
+.bg-progress-line {
+  background-color: $bg-progress-line;
+}
+
+// SET BAR
+.bar {
+  display: block;
+  height: 8px;
+  border-radius: 8px;
+}

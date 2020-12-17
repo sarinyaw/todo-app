@@ -1,0 +1,72 @@
+// create text
+@mixin text(
+  $color,
+  $family,
+  $size: 16px,
+  $weight: 400,
+  $align: left,
+  $margin: 0
+) {
+  color: $color;
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  text-align: $align;
+  margin: $margin;
+}
+
+// create flexbox
+@mixin flexbox(
+  $direction: row,
+  $justify-content: space-between,
+  $align-items: center
+) {
+  display: flex;
+  @if $direction {
+    flex-direction: $direction;
+  }
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+// create content
+@mixin content($padding, $margin, $radius, $border: false, $shadow: false) {
+  padding: $padding;
+  margin: $margin;
+  border-radius: $radius;
+  @if $border {
+    border: $border;
+  }
+  @if $shadow {
+    box-shadow: 0px 0px 4px 1px $shadow;
+  }
+}
+
+// create button
+@mixin button($bg-color, $color, $padding, $margin, $radius, $border: false) {
+  cursor: pointer;
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  margin: $margin;
+  border-radius: $radius;
+  @if $border {
+    border: $border;
+  }
+  outline: 0;
+}
+
+// create checkbox
+@mixin checkbox($color-border) {
+  @include flexbox(false, center);
+  @include content(0, 0, 0.5rem, 2px solid $color-border);
+  min-width: 20px;
+  height: 20px;
+  margin-right: 1rem;
+}
+
+// create checked in checkbox
+@mixin checked($color-fill, $color-check) {
+  background-color: $color-fill;
+  color: $color-check;
+}
