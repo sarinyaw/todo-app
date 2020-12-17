@@ -13,7 +13,8 @@ const Todo = ({ context }) => {
     // Fetch todo data from API when start
     if (!isFirstFetch) {
       setFirstFetch(true)
-      fetch(`https://my-json-server.typicode.com/sarinyaw/my-todo/todos`)
+      // or : https://my-json-server.typicode.com/sarinyaw/my-todo/todos/
+      fetch(`http://localhost:3001/todos`)
         .then((res) => res.json())
         .then((data) => {
           // add todo in todo state
