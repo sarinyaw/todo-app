@@ -10,7 +10,6 @@ const TodoInput = ({ context }) => {
     const todoID = uuid()
     // send todo data
     const bodyData = { id: todoID, title: data.title, completed: false }
-    // or : https://my-json-server.typicode.com/sarinyaw/my-todo/todos/
     fetch('http://localhost:3001/todos', {
       method: 'POST',
       headers: {

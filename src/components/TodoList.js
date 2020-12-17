@@ -17,7 +17,6 @@ const TodoList = ({ context }) => {
   const checkTodo = (todo) => {
     // send title's status
     const bodyData = { completed: !todo.completed }
-    // or : https://my-json-server.typicode.com/sarinyaw/my-todo/todos/
     fetch('http://localhost:3001/todos/' + todo.id, {
       method: 'PATCH',
       headers: {
@@ -43,7 +42,6 @@ const TodoList = ({ context }) => {
   // delete a todo
   const handleDelete = (index, id) => {
     setOpenMenu(todos.map(() => false))
-    // or : https://my-json-server.typicode.com/sarinyaw/my-todo/todos/
     fetch('http://localhost:3001/todos/' + id, {
       method: 'DELETE',
     })
