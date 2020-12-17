@@ -17,9 +17,9 @@ const Filter = ({ context }) => {
       </div>
       { isMenuOpen && (
         <ul className={styles.filterMenu}>
-          <li className={filters.status === 'All' && styles.active} onClick={() => {selectFilter('FILTER_ALL')}}>All</li>
-          <li className={filters.status === 'Done' && styles.active} onClick={() => {selectFilter('FILTER_DONE')}}>Done</li>
-          <li className={filters.status === 'Undone' && styles.active} onClick={() => {selectFilter('FILTER_UNDONE')}}>Undone</li>
+          <li className={filters.status === 'All' ? styles.active : ""} onClick={() => {selectFilter('FILTER_ALL')}}>All</li>
+          <li className={filters.status === 'Done' ? styles.active : ""} onClick={() => {selectFilter('FILTER_DONE')}}>Done</li>
+          <li className={filters.status === 'Undone' ? styles.active : ""} onClick={() => {selectFilter('FILTER_UNDONE')}}>Undone</li>
         </ul>
       )
       }
